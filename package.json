@@ -1,0 +1,24 @@
+{
+  "name": "simple-online-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npm run format:code && npm run format:sql",
+    "format:code": "prettier --write .",
+    "format:sql": "sql-formatter --fix --language postgresql db/schema.sql && sql-formatter --fix --language postgresql db/20260816_fix_order_stock_trigger.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "sql-formatter": "^15.8.2"
+  }
+}
